@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCS Job Application</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #141e30, #243b55);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            min-height: 100vh;
+            padding: 20px;
+            color: white;
+        }
+
+        /* TCS Banner Section */
+        .banner {
+            text-align: center;
+            padding: 20px;
+        }
+        .banner img {
+            width: 150px;
+        }
+        .banner h1 {
+            margin: 10px 0;
+            font-size: 28px;
+            color: #00c6ff;
+        }
+        .banner p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 16px;
+        }
+
+
+
+	/* Navigation Bar */
+        .navbar {
+            background: #003366;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 15px;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background: #0056b3;
+            border-radius: 5px;
+        }
+
+        /* Banner Section */
+        .banner {
+            text-align: center;
+            margin-top: 70px;
+            padding: 20px;
+        }
+        .banner img {
+            width: 180px;
+        }
+
+
+
+
+
+
+        /* Form Container */
+        .form-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 600px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #00c6ff;
+        }
+
+        /* Form Groups */
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #00c6ff;
+            border-radius: 6px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        .form-group textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        /* Resume Upload Preview */
+        .form-group input[type="file"] {
+            padding: 5px;
+        }
+        .resume-preview {
+            margin-top: 10px;
+            display: none;
+            font-size: 14px;
+            color: #00ff99;
+            font-weight: bold;
+        }
+
+        /* Submit Button */
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background: #00c6ff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .form-group button:hover {
+            background: #0094cc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .form-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+ <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('help')">Help</a>
+        <a href="#" onclick="showSection('about')">About</a>
+    </div>
+
+
+
+
+
+    <!-- TCS Company Banner -->
+    <div class="banner">
+        <img src="C:\Users\achin\OneDrive\Pictures\acadamics\TATA logo 1.png" alt="TCS Logo">
+        <h1>Welcome to Tata Consultancy Services (TCS)</h1>
+        <p>Leading global IT solutions provider. Apply now and become part of our innovative team.</p>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Job Application Form -->
+    <div id="home" class="form-container">
+            <h2>TCS Job Application</h2>
+        <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="access_key" value="441061dd-85f7-49ea-825f-5ca8b8b8f6ea">
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Full Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="education">Highest Education</label>
+                <input type="text" id="education" name="education" placeholder="e.g., B.Tech in CSE" required>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">Work Experience (in years)</label>
+                <input type="number" id="experience" name="experience" placeholder="Enter years of experience" required>
+            </div>
+
+            <div class="form-group">
+                <label for="skills">Key Skills</label>
+                <textarea id="skills" name="skills" placeholder="List your skills (e.g., Java, SQL, Spring Boot, HTML, CSS)" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="linkedin">LinkedIn Profile (Optional)</label>
+                <input type="url" id="linkedin" name="linkedin" placeholder="Enter your LinkedIn profile link">
+            </div>
+
+           <!--- <div class="form-group">
+                <label for="resume">Upload Resume (PDF only)</label>
+                <input type="file" id="resume" name="resume" accept=".pdf" required onchange="previewResume()">
+                <p class="resume-preview" id="resume-preview"></p>
+            </div> --->
+
+        <form id="jobForm" action="SubmitServlet" method="POST">
+                        <div class="form-group">
+                <button type="submit">Submit Application</button>
+            </div>
+        </form>
+    </div>
+
+
+
+<!-- Help Section -->
+    <div id="help" class="form-container" style="display:none;">
+        <h2>Help & Support</h2>
+        <p>For any queries, contact us at <strong>support@tcs.com</strong></p>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="form-container" style="display:none;">
+        <h2>About TCS</h2>
+        <p>Tata Consultancy Services is a global leader in IT services, consulting, and business solutions.</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        function previewResume() {
+            const fileInput = document.getElementById('resume');
+            const preview = document.getElementById('resume-preview');
+            if (fileInput.files.length > 0) {
+                preview.innerText = "Resume Selected: " + fileInput.files[0].name;
+                preview.style.display = "block";
+            } else {
+                preview.style.display = "none";
+            }
+        }
+    </script>
+
+
+   <script>
+        function showSection(section) {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('help').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+            document.getElementById(section).style.display = 'block';
+        }
+    </script>
+
+
+
+
+
+</body>
+</html>
